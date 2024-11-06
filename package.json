@@ -1,9 +1,9 @@
 {
-  "name": "user-registration-app",
+  "name": "jwtauth",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/chicuong2k3/user-registration-react",
+  "homepage": "https://github.com/chicuong2k3/JWT-Auth",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",

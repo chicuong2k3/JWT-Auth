@@ -12,8 +12,7 @@ import {
 } from "@mui/material";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { LoginFormData } from "../models/login";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../redux/store/configureStore";
+import { RootState, useAppDispatch, useAppSelector } from "../redux/store/configureStore";
 import { signinUser } from "../redux/slice/loginSlice";
 
 export default function LoginPage() {
@@ -22,11 +21,11 @@ export default function LoginPage() {
         password: "",
     });
 
-    const { error, login } = useSelector((state: RootState) => state.login);
+    const { error, login } = useAppSelector((state: RootState) => state.login);
     const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
